@@ -1,7 +1,8 @@
-import express from "express";
-
+const express = require("express");
 const app = express();
 
-app.listen(3000, () => {
-  console.log("server is running on 3000");
+app.get("/test", (req, res) => {
+  res.json("server is running on 4000");
 });
+
+app.listen(4000);
